@@ -2,10 +2,10 @@
 	// import Product from './product.svelte';
 
 	export let data;
-	const { products, title, Component } = data;
+	const { products, title, username, Component } = data;
 </script>
 
-<h1>{title}</h1>
+<h1>{title} for {username}</h1>
 
 {#each products as product}
 	<div>
