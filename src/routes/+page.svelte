@@ -1,6 +1,6 @@
 <script>
 	import { goto, preloadData, preloadCode } from '$app/navigation';
-
+	export let data;
 	const preloadDataProducts = async () => {
 		// await preloadData('/products');
 	};
@@ -10,7 +10,7 @@
 	};
 </script>
 
-<h1 class="tall">Welcome to SvelteKit</h1>
+<h1 class="tall">Welcome to SvelteKit @ {data.currentTime}</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <!-- eager | hover | off | tap | viewport -->
