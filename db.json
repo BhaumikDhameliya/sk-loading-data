@@ -50,5 +50,19 @@
 	"most-losing-stock": {
 		"symbol": "STOCK C",
 		"price": 100.0
-	}
+	},
+	"stocks": [
+		{
+			"symbol": "STOCK D",
+			"price": 151.0
+		},
+		{
+			"symbol": "STOCK E",
+			"price": 100.0
+		},
+		{
+			"symbol": "STOCK F",
+			"price": 244.0
+		}
+	]
 }

@@ -1,14 +1,9 @@
 export const load = async (loadEvent) => {
-	const { fetch } = loadEvent;
-	const mostActiveStockResponse = await fetch('http://localhost:4000/most-active-stock');
-	const topGainingStockResponse = await fetch('http://localhost:4000/most-gaining-stock');
-	const topLosingStockResponse = await fetch('http://localhost:4000/most-losing-stock');
-	// const mostActiveStock = await mostActiveStockResponse.json();
-	// const topGainingStock = await topGainingStockResponse.json();
-	// const topLosingStock = await topLosingStockResponse.json();
+	const { fetch, depends } = loadEvent;
+	depends('stocks:actively-trading');
+	const response = await fetch('http://localhost:4000/stocks');
+	const stocks = await response.json();
 	return {
-		mostActiveStock: mostActiveStockResponse.json(),
-		topGainingStock: topGainingStockResponse.json(),
-		topLosingStock: topLosingStockResponse.json()
+		stocks
 	};
 };
