@@ -1,3 +1,15 @@
+<script>
+	import { goto, preloadData, preloadCode } from '$app/navigation';
+
+	const preloadDataProducts = async () => {
+		await preloadData('/products');
+	};
+
+	const preloadCodeProducts = async () => {
+		await preloadCode('/products');
+	};
+</script>
+
 <h1 class="tall">Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
@@ -11,8 +23,18 @@
 
 <a href="/products" data-sveltekit-noscroll>Products</a>
 
+<button
+	on:mouseover={preloadDataProducts}
+	on:focus={preloadDataProducts}
+	on:click={() => {
+		goto('/products');
+	}}
+>
+	Go to products
+</button>
+
 <style>
-	.tall {
+	/* .tall {
 		height: 100vh;
-	}
+	} */
 </style>
