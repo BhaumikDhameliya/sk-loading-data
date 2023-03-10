@@ -2,7 +2,7 @@
 	import { goto, preloadData, preloadCode } from '$app/navigation';
 
 	const preloadDataProducts = async () => {
-		await preloadData('/products');
+		// await preloadData('/products');
 	};
 
 	const preloadCodeProducts = async () => {

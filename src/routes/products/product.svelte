@@ -1,6 +1,6 @@
 <script>
 	export let product;
-	import { goto } from '$app/navigation';
+	// import { goto } from '$app/navigation';
 </script>
 
 <div class="product-card">
