@@ -14,5 +14,7 @@ export const load = async (loadEvent) => {
 	};
 };
 
-export const ssr = true;
+// export const ssr = true;
 // export const csr = false;
+
+export const prerender = true;
